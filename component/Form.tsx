@@ -9,7 +9,7 @@ const FormPage = () => {
     message: "",
   });
 
-  const handleChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -17,7 +17,7 @@ const FormPage = () => {
     });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     // You can send the form data to an API endpoint here using fetch()
@@ -65,7 +65,6 @@ const FormPage = () => {
             value={formData.message}
             onChange={handleChange}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            rows="5"
             required
           />
         </div>
