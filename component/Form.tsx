@@ -9,7 +9,7 @@ const FormPage = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -17,7 +17,7 @@ const FormPage = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     // You can send the form data to an API endpoint here using fetch()
