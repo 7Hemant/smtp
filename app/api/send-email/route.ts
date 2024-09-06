@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     // Configure your SMTP transporter
     const transporter = nodemailer.createTransport({
       host: "live.smtp.mailtrap.io",
-      port: 2525,
+      port: 587,
       secure: false, // true for 465, false for other ports
       auth: {
         user: "api", // Replace with your SMTP email
