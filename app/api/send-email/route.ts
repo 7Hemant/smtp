@@ -10,12 +10,12 @@ export async function POST(req: Request) {
 
     // Configure your SMTP transporter
     const transporter = nodemailer.createTransport({
-      host: "sandbox.smtp.mailtrap.io",
+      host: "live.smtp.mailtrap.io",
       port: 2525,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: "47fa64866ceb95", // Replace with your SMTP email
-        pass: "48372e5903a5ea", // Replace with your SMTP password
+        user: "api", // Replace with your SMTP email
+        pass: "e2ec884eba2f7e329385159ac8dee655", // Replace with your SMTP password
       },
     });
 
