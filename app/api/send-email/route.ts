@@ -9,14 +9,14 @@ export async function POST(req: Request) {
     const { name, email, message } = data;
 
     // Configure your SMTP transporter
-   const transport = nodemailer.createTransport({
-     host: "live.smtp.mailtrap.io",
-     port: 587,
-     auth: {
-       user: "api",
-       pass: "e2ec884eba2f7e329385159ac8dee655",
-     },
-   });
+    const transport = nodemailer.createTransport({
+      host: "sandbox.smtp.mailtrap.io",
+      port: 2525,
+      auth: {
+        user: "47fa64866ceb95",
+        pass: "48372e5903a5ea",
+      },
+    });
 
     // Email options
     const mailOptions = {
